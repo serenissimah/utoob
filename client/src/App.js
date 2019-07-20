@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Comments from './components/Comments/Comments'
 import { Switch, Route, } from 'react-router-dom';
 import { Container, } from "semantic-ui-react";
+import DisplayVideo from './components/Videos/DisplayVideo';
 
 const App = () => (
   <>
@@ -20,6 +21,7 @@ const App = () => (
           <Route exact path="/comments" component={Comments} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/displayvideo" component={DisplayVideo} />
           <Route component={NoMatch} />
         </Switch>
       </Container>
