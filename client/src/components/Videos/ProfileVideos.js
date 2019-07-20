@@ -12,14 +12,9 @@ class ProfileVideos extends React.Component {
   render() {
     return (
       <>
-<<<<<<< HEAD
-        <Header>Your Videos:</Header>
-        <Divider />
-=======
       <div style={{backgroundColor:"#DCDCDC"}}>
         <Header style={{padding: "25px 0 0 25px"}}>All Videos</Header>
         <div style={{padding: "30px 0 0 40px"}}>
->>>>>>> fdb7e628edb6ae1839c57d4a803822df0ab2931e
         <Card.Group itemsPerRow={4}>
           {this.state.videos.map(videos =>
             <Link to={`/videos/${videos.id}`}>

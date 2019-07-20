@@ -11,7 +11,7 @@ import { Container, } from "semantic-ui-react";
 import VideoForm from './components/Videos/VideoForm';
 import ProfileVideos from './components/Videos/ProfileVideos';
 import DisplayVideo from './components/Videos/DisplayVideo';
-import VideoForm from './components/Videos/VideoForm';
+
 
 
 const App = () => (

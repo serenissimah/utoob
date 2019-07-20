@@ -1,4 +1,3 @@
-
 import React, { Fragment, useState, useEffect, useCallback } from 'react';
 import { Form, Button, Card, Image } from 'semantic-ui-react';
 import { Link, } from "react-router-dom";
@@ -127,15 +126,3 @@ export default class ConnectedVideoForm extends React.Component {
     )
   }
 }
-=======
-import React from 'react'
-
-class VideoForm extends React.Component{
-  render(){
-    return(
-      <div>Hi, yes.  Hello!</div>
-    )
-  }
-}
-
-export default VideoForm
