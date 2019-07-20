@@ -3,6 +3,7 @@ import { Header, } from 'semantic-ui-react';
 import DisplayVideo from './Videos/DisplayVideo';
 // import Comments from '../components/comments/Comments'
 import Axios from 'axios';
+import DisplayVideo from './Videos/ProfileVideos';
 
 
 

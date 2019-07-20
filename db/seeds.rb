@@ -9,7 +9,7 @@
       duration = "3"
       genre = Faker::Book.genre
       description = Faker::Movie.quote
-      trailer = Faker::Internet.url
+      trailer = Faker::Avatar.image
       v = Video.create(title: title, duration: duration, genre: genre, description: description, trailer: trailer, user_id: u.id)
     5.times do
       body = Faker::Marketing.buzzwords
