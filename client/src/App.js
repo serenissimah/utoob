@@ -6,7 +6,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import FetchUser from './components/FetchUser';
 import ProtectedRoute from './components/ProtectedRoute';
-import Comments from './components/Comments/Comments'
+import Comments from './components/comments/Comments'
 import { Switch, Route, } from 'react-router-dom';
 import { Container, } from "semantic-ui-react";
 
