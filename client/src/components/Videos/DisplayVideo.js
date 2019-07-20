@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, } from 'react';
 import axios from 'axios';
 import { Header, Image } from 'semantic-ui-react';
-import Utoob from '../Images/Utoob.png';
 
-const Video = (props) => {
-	const [ video, setVideo ] = useState([]);
+const DisplayVideo = (props) => {
+  const [ video, setVideo ] = useState([]);
+
+  // useEffect(() => {
+  //   axios.get(`/api/videos/${video_id}`)
+  // }, [])
+
+  return(
+    <div>
+      hello
+    </div>
+  )
 };
-
-const DisplayVideo = () => (
-  <>
-  <Image src={Utoob} size='small'/>
-  
-	<Header as='h3' textAlign='center'>
-    Video Title
-		{/* {VideoTitle} */}
-	</Header>
-  </>
-);
 
 export default DisplayVideo;
