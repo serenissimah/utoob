@@ -35,6 +35,3 @@ class ProfileVideos extends React.Component {
   }
 }
 export default ProfileVideos
-
-
-
