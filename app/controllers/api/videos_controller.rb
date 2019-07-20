@@ -1,9 +1,8 @@
 class Api::VideosController < ApplicationController
-  before_action :set_lesson
   before_action :set_video, only: [:show, :update, :destroy]
 
   def index
-    render json: @lesson.videos 
+    render json: Video.all 
   end
 
   def show
@@ -11,7 +10,7 @@ class Api::VideosController < ApplicationController
   end
 
   def create
-    video = @lesson.videos.new
+    video = Video.new
     video.title = params[:title] ? params[:title] : video.title
     video.description = params[:description] ? params[:description] : video.description
 
@@ -34,7 +33,6 @@ class Api::VideosController < ApplicationController
   end
 
   def update
-    # @video #Video.find(params[:id])
     @video.title = params[:title] ? params[:title] : @video.title
     @video.description = params[:description] ? params[:description] : @video.description
 
@@ -62,9 +60,6 @@ class Api::VideosController < ApplicationController
   end
 
   private
-  def set_lesson
-    @lesson = Lesson.find(params[:lesson_id])
-  end
 
   def set_video
     @video = Video.find(params[:id])
