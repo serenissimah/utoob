@@ -11,6 +11,7 @@ import { Switch, Route, } from 'react-router-dom';
 import { Container, } from "semantic-ui-react";
 import DisplayVideo from './components/Videos/DisplayVideo';
 
+
 const App = () => (
   <>
     <Navbar />
