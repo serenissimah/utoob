@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header, } from 'semantic-ui-react';
-import DisplayVideo from './Videos/DisplayVideo';
+import DisplayVideo from './Videos/ProfileVideos';
 
 const Home = () => (
   <>
