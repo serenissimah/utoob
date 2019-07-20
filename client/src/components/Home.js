@@ -9,13 +9,20 @@ import ProfileVideos from './Videos/ProfileVideos';
 
 const Home = () => ( 
   <>
+  <div style={{backgroundColor: "#DCDCDC"}}>
+    <h1 style={{padding: "25px 0 25px 25px"}}>All videos</h1>
     {/* <Header as="h3" textAlign="center">UToob</Header> */}
     {/* {VideoTitle} */}
     {/* <Comments */}
     <ProfileVideos />
+    
     {/* // video_id={video.id} */}
-   
+  </div>
     </>
 )
 
 export default Home;
+
+
+
+

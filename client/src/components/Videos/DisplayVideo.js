@@ -8,7 +8,6 @@ const Video = (props) => {
 
 const DisplayVideo = () => (
  <>
- {/* <Image src={Utoob} size='small'/> */}
 
     <Header as='h3' textAlign='center'>
    Video Title
