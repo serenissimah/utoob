@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import { Switch, Route, } from 'react-router-dom';
 import { Container, } from "semantic-ui-react";
 
+
 const App = () => (
   <>
     <Navbar />
