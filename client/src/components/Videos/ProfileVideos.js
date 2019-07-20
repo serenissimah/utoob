@@ -20,7 +20,7 @@ class ProfileVideos extends React.Component {
         <Header>Render Videos</Header>
         <Card.Group itemsPerRow={4}>
           {this.state.videos.map(videos =>
-            <Link to='/DisplayVideo/$(id)'>
+            <Link to={`/videos/${videos.id}`}>
               <Card key={videos.id}>
                 <Image src={videos.trailer} />
                 <Card.Content>
