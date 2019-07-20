@@ -12,6 +12,7 @@ const Home = () => (
     {/* <Header as="h3" textAlign="center">UToob</Header> */}
     {/* {VideoTitle} */}
     {/* <Comments */}
+    <ProfileVideos />
     {/* // video_id={video.id} */}
    
     </>
