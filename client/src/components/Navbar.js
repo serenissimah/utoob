@@ -53,9 +53,8 @@ class Navbar extends React.Component {
         <div style={{float: "right", padding:"0 25px 0 0"}}>
           { this.rightNavItems() }
         </div>
-        <div style={{float: "right", padding:"0 25px 0 0"}}>
-        <Button>
-        <Link to="/videos">
+
+        <div style={{float: "right", padding:"0 25px 0 0"}}><Button as={Link} to={"/newvideo"}>
           Upload Video
         </Link>
         </Button> 
