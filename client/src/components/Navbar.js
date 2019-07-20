@@ -52,8 +52,11 @@ class Navbar extends React.Component {
           </div>
         <div style={{float: "right", padding:"0 25px 0 0"}}>{ this.rightNavItems() }
         </div>
-        <div style={{float: "right", padding:"0 25px 0 0"}}><Button>
+        <div style={{float: "right", padding:"0 25px 0 0"}}>
+        <Button>
+        <Link to="/videos">
           Upload Video
+        </Link>
         </Button> 
         </div>
           <div style={{float: "right", padding:"0 25px 0 25px"}} ><img src="https://resources-live.sketch.cloud/files/6f304d0b-fd53-4d76-8fa4-3bbd49f2b696.png?Expires=1563757200&Signature=gPfapizcx1LgAZoOEI-1KCbXFjcGsUIPOAL-y94RZP33lO7VRC-maIRfp6xiQWO41jZe3BpZ2vH9Qov6x9W~evf29ff6FoIN9efAiYfwkJFF0naXpN4vqU0YouPATpC9CKrbpDRwhAWVz6Zd16GWr2eakDkHJgbAHvTJFNSLVfY_&Key-Pair-Id=APKAJOITMW3RWOLNNPYA" width="40px" height="35px"/>

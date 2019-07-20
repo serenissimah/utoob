@@ -2,7 +2,6 @@ import React from 'react'
 import { Header, Card, Divider, Image } from 'semantic-ui-react'
 import { Link, } from 'react-router-dom'
 import axios from 'axios'
-import DisplayVideo from './ProfileVideos'
 
 class ProfileVideos extends React.Component {
   state = { videos: [], }
@@ -18,7 +17,7 @@ class ProfileVideos extends React.Component {
         <Card.Group itemsPerRow={4}>
           {this.state.videos.map(videos =>
             <Link to={`/videos/${videos.id}`}>
-              <Card key={videos.id}>
+              <Card key={videos.id} id={videos.id}>
                 <Image src={videos.trailer} />
                 <Card.Content>
                   <Divider />
