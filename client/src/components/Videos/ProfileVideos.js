@@ -3,17 +3,12 @@ import { Header, Card, Divider, Image } from 'semantic-ui-react'
 import { Link, } from 'react-router-dom'
 import axios from 'axios'
 import DisplayVideo from './ProfileVideos'
-
 class ProfileVideos extends React.Component {
   state = { videos: [], }
-
   componentDidMount() {
     axios.get('/api/videos')
       .then(res => this.setState({ videos: res.data, }))
   };
-
-
-
   render() {
     return (
       <>
@@ -35,5 +30,4 @@ class ProfileVideos extends React.Component {
     )
   }
 }
-
 export default ProfileVideos
