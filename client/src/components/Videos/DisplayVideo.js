@@ -5,7 +5,7 @@ class DisplayVideo extends React.Component{
 
   render(){
     return(
-      <div>Render Image Here</div>
+      <div>Render Video Here</div>
     )
   }
 }
