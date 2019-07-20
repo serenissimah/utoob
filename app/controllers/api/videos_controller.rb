@@ -16,6 +16,7 @@ class Api::VideosController < ApplicationController
     video.genre = params[:genre] ? params[:genre] : video.genre
     video.trailer = params[:trailer] ? params[:trailer] : video.trailer
     video.description = params[:description] ? params[:description] : video.description
+    video.user_id = params[:user_id] ? params[:user_id] : video.user_id
 
     file = params[:file]
     if file
@@ -68,6 +69,6 @@ class Api::VideosController < ApplicationController
   end
 
   def video_params
-    params.require(:video).permit(:title, :description, :url)
+    params.require(:video).permit(:title, :description, :trailer, :duration, :genre, :user_id)
   end
 end

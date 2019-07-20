@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect, useCallback } from 'react';
 import { Form, Button, Card, Image } from 'semantic-ui-react';
 import axios from 'axios';
 import { useDropzone } from 'react-dropzone';
-
+import { AuthConsumer } from '../../providers/AuthProvider';
 
 const VideoForm = (props) => {
   const videoState = {
@@ -32,7 +32,24 @@ const VideoForm = (props) => {
     data.append("description", description);
     data.append("trailer", trailer);
     data.append("duration", duration);
+    data.append("user_id", props.auth.user.id)
 
+    axios.post("/api/videos", data)
+      .then( res => {
+        setTitle("")
+        setDescription("")
+        setGenre("")
+        setDuration("")
+        setTrailer("")
+      })
+      .catch(err => {
+        console.log("Error")
+      })
+      setTitle("")
+      setDescription("")
+      setGenre("")
+      setDuration("")
+      setTrailer("") 
   }
 
 
@@ -97,4 +114,14 @@ const VideoForm = (props) => {
   
   }
 
-export default VideoForm
+export default class ConnectedVideoForm extends React.Component {
+  render() {
+    return(
+      <AuthConsumer>
+        { auth =>
+          <VideoForm {...this.props} auth={auth} />
+        }
+      </AuthConsumer>  
+    )
+  }
+}
