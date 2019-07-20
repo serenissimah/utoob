@@ -10,6 +10,10 @@ class Api::CommentsController < ApplicationController
     render json: @comment
   end
 
+  def userinfo
+    render json: Comment.user_info(params[:user_id], params[:id])
+  end
+
   def create
     @user = current_user
     comment = @user.comments.new(comment_params)
