@@ -12,6 +12,9 @@ class Api::VideosController < ApplicationController
   def create
     video = Video.new
     video.title = params[:title] ? params[:title] : video.title
+    video.duration = params[:duration] ? params[:duration] : video.duration
+    video.genre = params[:genre] ? params[:genre] : video.genre
+    video.trailer = params[:trailer] ? params[:trailer] : video.trailer
     video.description = params[:description] ? params[:description] : video.description
 
     file = params[:file]
@@ -21,7 +24,6 @@ class Api::VideosController < ApplicationController
         cloud_video = Cloudinary::Uploader.upload(file, public_id: file.original_filename, :resource_type => :video, secure: true)
         video.url = cloud_video['secure_url']
       rescue => exception
-        # render json: {errors: exception}, status: 422 
         
       end
     end 
