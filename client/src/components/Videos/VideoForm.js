@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect, useCallback } from 'react';
 import { Form, Button, Card, Image } from 'semantic-ui-react';
+import { Link, } from "react-router-dom";
 import axios from 'axios';
 import { useDropzone } from 'react-dropzone';
 import { AuthConsumer } from '../../providers/AuthProvider';
@@ -99,7 +100,7 @@ const VideoForm = (props) => {
             onChange={handleChange("trailer")}/>
 
       </Form.Group>
-      <Form.Button>Submit</Form.Button>
+      <Form.Button as={Link} to={"/"}>Submit</Form.Button>
       </Form>
 )
     }
