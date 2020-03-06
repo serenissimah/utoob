@@ -1,6 +1,6 @@
 import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, } from 'semantic-ui-react'
+import { Menu, Button, } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 
 class Navbar extends React.Component {
@@ -19,6 +19,7 @@ class Navbar extends React.Component {
       )
     } else {
       return (
+        <>
         <Menu.Menu position='right'>
           <Link to='/login'>
             <Menu.Item
@@ -34,25 +35,40 @@ class Navbar extends React.Component {
               active={location.pathname === '/register'}
             />
           </Link>
+          
         </Menu.Menu>
+        
+        </>
       )
     }
   }
   
   render() {
     return (
-      <div>
-        <Menu pointing secondary>
-          <Link to='/'>
-            <Menu.Item
-              name='home'
-              id='home'
-              active={this.props.location.pathname === '/'}
-            />
-          </Link>
-            { this.rightNavItems() }
-        </Menu>
-      </div>
+      <>
+        <br />
+        <div>
+          <div style={{float: "left", padding:"0 0 0 50px"}}>
+            <img  width="100px" height="35px" src="https://resources-live.sketch.cloud/files/0c691bf6-95ea-4f35-ad3e-46e842eefe7b.png?Expires=1563757200&Signature=JZOLUzbbpRRf75jc9AVKNkdgULSUJTUXonJwc11yPZ2NOCYPKfCGxMJP5iBOTiNMr-z2aTOroxhU8Q44cxiG65nXwui7CDUvjika~Jq-m~FDsdLzlRVIU9f7n4Cbu9-sxXiZykhFvoFJdBA0TPvtHMQyoik9Zr2UjkmkPFDF2FU_&Key-Pair-Id=APKAJOITMW3RWOLNNPYA" />
+          </div>
+        <div style={{float: "right", padding:"0 25px 0 0"}}>
+          { this.rightNavItems() }
+        </div>
+        <div style={{float: "right", padding:"0 25px 0 0"}}>
+          <Button as={Link} to={"api/newvideo"}>
+            Upload Video
+          </Button> 
+        </div>
+          <div style={{float: "right", padding:"0 25px 0 25px"}}>
+            <img src="https://resources-live.sketch.cloud/files/6f304d0b-fd53-4d76-8fa4-3bbd49f2b696.png?Expires=1563757200&Signature=gPfapizcx1LgAZoOEI-1KCbXFjcGsUIPOAL-y94RZP33lO7VRC-maIRfp6xiQWO41jZe3BpZ2vH9Qov6x9W~evf29ff6FoIN9efAiYfwkJFF0naXpN4vqU0YouPATpC9CKrbpDRwhAWVz6Zd16GWr2eakDkHJgbAHvTJFNSLVfY_&Key-Pair-Id=APKAJOITMW3RWOLNNPYA" width="40px" height="35px"/>
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        
+      </>
     )
   }
 }

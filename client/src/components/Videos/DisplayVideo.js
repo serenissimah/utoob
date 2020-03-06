@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect, } from 'react';
+import axios from 'axios';
+import { Header, Image } from 'semantic-ui-react';
 
-class DisplayVideo extends React.Component{
-  
+const DisplayVideo = (props) => {
+  const [ video, setVideo ] = useState([]);
 
-  render(){
-    return(
-      <div>Render Image Here</div>
-    )
-  }
-}
+  // useEffect(() => {
+  //   axios.get(`/api/videos/${video_id}`)
+  // }, [])
 
-export default DisplayVideo
+  return(
+    <div>
+      hello
+    </div>
+  )
+};
+
+export default DisplayVideo;
